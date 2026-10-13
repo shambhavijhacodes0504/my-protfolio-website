@@ -15,7 +15,7 @@ export const gridItems = [
   {
     id: 1,
     title: "About Me",
-    description: "I'm Shambhavi Jha, a BCA student at Birla Institute of Technology, Mesra, focused on machine learning, data science, and applied AI research. I explore predictive modeling, semantic search, computer vision, and data-driven problem solving to turn technical ideas into practical applications.",
+    description: "I'm Shambhavi, a BCA student at Birla Institute of Technology, Mesra, focused on machine learning, data science, and applied AI research. I explore predictive modeling, semantic search, computer vision, and data-driven problem solving to turn technical ideas into practical applications.",
     title2: "Education",
     description2: "2025 - Present \u00A0\u00A0 Birla Institute of Technology, Mesra",
     description3: "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Bachelor of Computer Applications · CGPA 8.7",
@@ -82,7 +82,7 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote: "Shambhavi Jha is dedicated to developing rigorous machine learning models, semantic recommendation systems, and data-driven solutions.",
+    quote: "Shambhavi is dedicated to developing rigorous machine learning models, semantic recommendation systems, and data-driven solutions.",
     name: "Birla Institute of Technology, Mesra",
     title: "Department of Computer Science & Applications",
   },

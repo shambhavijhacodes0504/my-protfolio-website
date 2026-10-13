@@ -45,7 +45,7 @@ export interface ExperienceItem {
 
 export const portfolioData = {
   profile: {
-    name: "Shambhavi Jha",
+    name: "Shambhavi",
     role: "AI/ML Engineer · Data Scientist · Applied AI Research",
     institution: "Birla Institute of Technology, Mesra",
     degree: "Bachelor of Computer Applications (BCA)",
@@ -61,7 +61,7 @@ export const portfolioData = {
       "I explore machine learning, semantic search, computer vision, and data-driven problem solving to turn technical ideas into useful applications.",
     
     aboutParagraph1:
-      "I'm Shambhavi Jha, a BCA student at Birla Institute of Technology, Mesra, with an interest in machine learning, data science, and applied AI research. I enjoy exploring how data, algorithms, and intelligent systems can solve practical problems, from computer vision to semantic recommendation systems.",
+      "I'm Shambhavi, a BCA student at Birla Institute of Technology, Mesra, with an interest in machine learning, data science, and applied AI research. I enjoy exploring how data, algorithms, and intelligent systems can solve practical problems, from computer vision to semantic recommendation systems.",
     aboutParagraph2:
       "My work centers on data exploration, predictive modeling, semantic representations, and building interactive tools around machine learning pipelines. I am particularly curious about how models formulate intermediate representations and how their decisions can be analyzed, evaluated, and explained.",
     

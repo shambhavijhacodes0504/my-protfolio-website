@@ -35,7 +35,7 @@ This Code of Conduct applies within all project spaces, and also applies when an
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainer at:
-- **Contact**: Shambhavi Jha
+- **Contact**: Shambhavi
 - **Email**: [shambhavijha0504@gmail.com](mailto:shambhavijha0504@gmail.com)
 
 All complaints will be reviewed and investigated promptly and fairly. All maintainers are obligated to respect the privacy and security of the reporter of any incident.

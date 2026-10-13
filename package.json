@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "author": {
-    "name": "Shambhavi Jha",
+    "name": "Shambhavi",
     "email": "shambhavijha0504@gmail.com"
   },
-  "description": "Shambhavi Jha | AI/ML Engineer, Data Scientist & Applied AI Research Portfolio",
+  "description": "Shambhavi | AI/ML Engineer, Data Scientist & Applied AI Research Portfolio",
   "keywords": [
     "reactjs",
     "nextjs",

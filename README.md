@@ -1,12 +1,12 @@
 # Shambhavi Portfolio
 
-Shambhavi Jha's personal portfolio showcases projects, technical skills, research interests, and academic background in AI/ML, data science, computer vision, and software development. The website brings together selected work, project documentation, and contact information in a responsive interactive experience.
+Shambhavi's personal portfolio showcases projects, technical skills, research interests, and academic background in AI/ML, data science, computer vision, and software development. The website brings together selected work, project documentation, and contact information in a responsive interactive experience.
 
 ---
 
 ## Maintainer Information
 
-- **Maintainer**: Shambhavi Jha
+- **Maintainer**: Shambhavi
 - **Email**: [shambhavijha0504@gmail.com](mailto:shambhavijha0504@gmail.com)
 - **GitHub**: [https://github.com/shambhavijhacodes0504](https://github.com/shambhavijhacodes0504)
 - **LinkedIn**: [https://www.linkedin.com/in/shambhavi-jha0405/](https://www.linkedin.com/in/shambhavi-jha0405/)
@@ -19,7 +19,7 @@ Shambhavi Jha's personal portfolio showcases projects, technical skills, researc
 
 ## Portfolio Purpose
 
-This portfolio serves as an interactive showcase and central repository for Shambhavi Jha's engineering projects, exploratory research, and academic achievements. Key objectives include:
+This portfolio serves as an interactive showcase and central repository for Shambhavi's engineering projects, exploratory research, and academic achievements. Key objectives include:
 - Presenting machine learning pipelines, semantic vector search engines, and predictive analytics applications.
 - Documenting ongoing experimental investigations in Explainable AI and adaptive learning systems.
 - Providing verified work experience, internship records, and academic background.
@@ -258,5 +258,5 @@ All assets and profile details can be replaced without modifying core component 
 ## Credits and Licensing
 
 - **License**: Released under the [MIT License](./LICENSE).
-- **Portfolio Implementation**: Maintained by Shambhavi Jha (2025–present).
+- **Portfolio Implementation**: Maintained by Shambhavi (2025–present).
 - **Template Foundation & Acknowledgments**: Acknowledges the original Next.js 3D portfolio template foundation by Sanidhya Kumar Verma, with UI inspiration and components adapted from [Aceternity UI](https://ui.aceternity.com/).

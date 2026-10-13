@@ -10,7 +10,7 @@ Do **not** create public GitHub issues for security vulnerabilities.
 
 Instead, please send an email directly to:
 
-- **Maintainer**: Shambhavi Jha
+- **Maintainer**: Shambhavi
 - **Email**: [shambhavijha0504@gmail.com](mailto:shambhavijha0504@gmail.com)
 - **Subject**: `[Security] Vulnerability Report - Shambhavi Portfolio`
 

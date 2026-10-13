@@ -1,6 +1,6 @@
 # Contributing to Shambhavi Portfolio
 
-Thank you for your interest in contributing to Shambhavi Jha's portfolio repository! 🎉
+Thank you for your interest in contributing to Shambhavi's portfolio repository! 🎉
 
 All constructive contributions, bug reports, and suggestions are welcomed. Please review these guidelines before submitting an issue or pull request.
 
@@ -81,7 +81,7 @@ Constructive suggestions regarding UI accessibility, performance optimizations, 
 
 ## Maintainer Contact
 
-- **Maintainer**: Shambhavi Jha
+- **Maintainer**: Shambhavi
 - **Email**: [shambhavijha0504@gmail.com](mailto:shambhavijha0504@gmail.com)
 - **GitHub**: [shambhavijhacodes0504](https://github.com/shambhavijhacodes0504)
 - **Repository**: [https://github.com/shambhavijhacodes0504/my-protfolio-website](https://github.com/shambhavijhacodes0504/my-protfolio-website)

@@ -25,7 +25,7 @@ export const AboutMe = () => {
               <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-white/[0.12] bg-[#0c1222] shadow-[0_8px_30px_rgb(0,0,0,0.5)] transition-all duration-300 group-hover:border-sky-500/50 group-hover:shadow-[0_12px_40px_rgba(56,189,248,0.2)]">
                 <Image
                   src={assetConfig.portrait}
-                  alt="Shambhavi Jha in the workshop holding a model aircraft"
+                  alt="Shambhavi in the workshop holding a model aircraft"
                   fill
                   sizes="(max-width: 1024px) 100vw, 420px"
                   className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -58,7 +58,7 @@ export const AboutMe = () => {
           <RevealSubheading delay={0.12}>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-neutral-300 sm:text-lg">
               <p>
-                I&apos;m Shambhavi Jha, a BCA student at Birla Institute of Technology, Mesra. I&apos;m interested in how machine learning and data science can help solve practical problems. My projects have taken me into areas such as computer vision, semantic search, and predictive analytics. I enjoy exploring how these systems work, understanding their limitations, and turning what I learn into useful applications.
+                I&apos;m Shambhavi, a BCA student at Birla Institute of Technology, Mesra. I&apos;m interested in how machine learning and data science can help solve practical problems. My projects have taken me into areas such as computer vision, semantic search, and predictive analytics. I enjoy exploring how these systems work, understanding their limitations, and turning what I learn into useful applications.
               </p>
               <p className="text-sm text-neutral-400 sm:text-base">
                 When developing an idea, I prioritize the link between data quality, feature representations, and reproducible evaluation. Rather than treating models as opaque black boxes, I like examining embeddings, tracking error distributions, and building interactive tools to evaluate predictions in real scenarios.

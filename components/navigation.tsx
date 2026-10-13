@@ -72,6 +72,14 @@ export const Navigation = () => {
                     : 'text-neutral-400 hover:text-white'
                 }`}
               >
+                {isActive && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-2.5 left-1/2 -translate-x-1/2 text-[9px] text-sky-300 drop-shadow-[0_0_8px_rgba(56,189,248,0.9)] animate-pulse"
+                  >
+                    ✦
+                  </span>
+                )}
                 <span>{item.name}</span>
                 {isActive ? (
                   <motion.span

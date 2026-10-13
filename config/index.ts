@@ -4,7 +4,7 @@ export const links = {
   sourceCode: "https://github.com/shambhavijhacodes0504/my-protfolio-website",
   github: "https://github.com/shambhavijhacodes0504",
   linkedin: "https://www.linkedin.com/in/shambhavi-jha0405/",
-  ownerName: "Shambhavi Jha",
+  ownerName: "Shambhavi",
   ownerEmail: "shambhavijha0504@gmail.com",
   resumeUrl: "/resume/Shambhavi_Jha_Resume.pdf",
 } as const;
@@ -23,9 +23,9 @@ export const siteConfig: Metadata = {
   metadataBase: new URL("https://shambhavijhacodes0504.github.io/my-protfolio-website"),
   title: "Shambhavi Portfolio | AI/ML, Data Science & Applied AI Research",
   description:
-    "Explore Shambhavi Jha's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research. BCA Student at BIT Mesra.",
+    "Explore Shambhavi's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research. BCA Student at BIT Mesra.",
   keywords: [
-    "Shambhavi Jha",
+    "Shambhavi",
     "Shambhavi Portfolio",
     "AI/ML Engineer",
     "Data Scientist",
@@ -54,22 +54,22 @@ export const siteConfig: Metadata = {
     url: "https://shambhavijhacodes0504.github.io/my-protfolio-website",
     title: "Shambhavi Portfolio | AI/ML Engineer & Data Scientist",
     description:
-      "Explore Shambhavi Jha's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research.",
+      "Explore Shambhavi's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research.",
     siteName: "Shambhavi Portfolio",
     images: [
       {
         url: "/images/profile/shambhavi-portrait.jpeg",
         width: 1200,
         height: 630,
-        alt: "Shambhavi Jha — AI/ML Engineer & Data Scientist",
+        alt: "Shambhavi — AI/ML Engineer & Data Scientist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shambhavi Portfolio | Shambhavi Jha",
+    title: "Shambhavi Portfolio | Shambhavi",
     description:
-      "Explore Shambhavi Jha's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research.",
+      "Explore Shambhavi's portfolio in machine learning, data science, semantic recommendation systems, computer vision, and applied AI research.",
     images: ["/images/profile/shambhavi-portrait.jpeg"],
   },
 };

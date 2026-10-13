@@ -137,7 +137,7 @@ export const BentoGridItem = ({
               <div className="relative size-28 sm:size-32 md:size-36 shrink-0 overflow-hidden rounded-2xl border border-sky-500/40 shadow-[0_0_24px_rgba(56,189,248,0.25)]">
                 <Image
                   src="/images/profile/shambhavi-portrait.jpeg"
-                  alt="Shambhavi Jha genuine portrait"
+                  alt="Shambhavi genuine portrait"
                   fill
                   sizes="(max-width: 768px) 128px, 144px"
                   className="object-cover object-top"

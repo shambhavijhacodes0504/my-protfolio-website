@@ -86,6 +86,10 @@
   .black-gradient {
     background: linear-gradient(90deg, #000000 0%, #000000 100%);
   }
+
+  .font-display {
+    font-family: var(--font-serif), 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -6,29 +6,25 @@ import { Canvas, extend, useThree, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
-import { Image } from '@react-three/drei';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 // Path lokal
 const GLTF_PATH = '/assets/card.glb';
 const TEXTURE_PATH = '/assets/band.png';
-const IMAGE_PATH = '/assets/port.png';
-const PORTRAIT_PATH = '/images/profile/shambhavi-portrait.jpeg';
 
 useGLTF.preload(GLTF_PATH);
 useTexture.preload(TEXTURE_PATH);
 
-export default function App() {
+export default function App({ className = '', style = {} }) {
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <Canvas camera={{ position: [0, 0, 10], fov: 25 }}>
+    <div className={`relative w-full h-full ${className}`} style={style}>
+      <Canvas camera={{ position: [0, 0, 11], fov: 25 }} gl={{ alpha: true }}>
         <ambientLight intensity={Math.PI} />
         <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
           <Band />
         </Physics>
-        <Environment background blur={0.75}>
-          <color attach="background" args={['black']} />
+        <Environment blur={0.75}>
           <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
@@ -50,34 +46,30 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
   
-  // Deteksi mobile berdasarkan lebar layar
+  // Deteksi mobile berdasarkan lebar canvas
   const isMobile = width < 768;
   
-  // Posisi responsif untuk card - DIPERBAIKI SINTAKS
-  const cardPosition = isMobile ? [4, 5, 0] : [3, 4, 0];
-  const initialJointPositions = isMobile ? [
-    [0.3, 0, 0], 
+  // Posisi responsif untuk card anchor
+  const cardPosition = isMobile ? [0, 2.6, 0] : [0, 2.8, 0];
+  const initialJointPositions = [
+    [0.2, 0, 0], 
+    [0.4, 0, 0], 
     [0.6, 0, 0], 
-    [0.9, 0, 0], 
-    [1.2, 0, 0]
-  ] : [
-    [3.5, 0, 0], 
-    [4, 0, 0], 
-    [4.5, 0, 0], 
-    [5, 0, 0]
+    [0.8, 0, 0]
   ];
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
-  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.50, 0]]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.75]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.75]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.75]);
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-    if (hovered) {
-      document.body.style.cursor = dragged ? 'grabbing' : 'grab';
-      return () => void (document.body.style.cursor = 'auto');
-    }}
+      if (hovered) {
+        document.body.style.cursor = dragged ? 'grabbing' : 'grab';
+        return () => void (document.body.style.cursor = 'auto');
+      }
+    }
   }, [hovered, dragged]);
 
   useFrame((state, delta) => {
@@ -98,10 +90,14 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
       curve.points[1].copy(j2.current.lerped);
       curve.points[2].copy(j1.current.lerped);
       curve.points[3].copy(fixed.current.translation());
-      band.current.geometry.setPoints(curve.getPoints(32));
-      ang.copy(card.current.angvel());
-      rot.copy(card.current.rotation());
-      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
+      if (band.current?.geometry) {
+        band.current.geometry.setPoints(curve.getPoints(32));
+      }
+      if (card.current) {
+        ang.copy(card.current.angvel());
+        rot.copy(card.current.rotation());
+        card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
+      }
     }
   });
 
@@ -122,10 +118,10 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody position={initialJointPositions[3]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[0.8, 1.125, 0.01]} />
+          <CuboidCollider args={[isMobile ? 0.6 : 0.7, isMobile ? 0.85 : 0.98, 0.01]} />
           <group
-            scale={isMobile ? 1.5 : 2.25}
-            position={[0, -1.2, -0.05]}
+            scale={isMobile ? 1.3 : 1.75}
+            position={[0, -0.70, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
@@ -142,14 +138,6 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         <meshLineGeometry />
         <meshLineMaterial color="white" depthTest={false} resolution={[width, height]} useMap map={texture} repeat={[-3, 1]} lineWidth={1} />
       </mesh>
-      
-      {/* Image portofolio - hanya tampil di desktop */}
-      {!isMobile && (
-        <Image url={IMAGE_PATH} position={[0, 0, -2]} scale={[10, 1, 2]} />
-      )}
-      {isMobile && (
-        <Image url={IMAGE_PATH} position={[0, 0, -25]} scale={[10, 1, 2]} />
-      )}
     </>
   );
 }
