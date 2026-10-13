@@ -108,7 +108,7 @@ The website presents four core technical projects and research initiatives:
 ## Project Structure
 
 ```text
-my-portfolio-website/
+Shambhavi-Portfolio-Website/
 ├── app/
 │   ├── apple-icon.png         # Apple touch icon
 │   ├── favicon.ico            # Website favicon
@@ -164,8 +164,8 @@ my-portfolio-website/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/shambhavijhacodes0504/my-portfolio-website.git
-   cd my-portfolio-website
+   git clone https://github.com/shambhavijhacodes0504/my-protfolio-website.git
+   cd Shambhavi-Portfolio-Website
    ```
 
 2. **Install dependencies**:
@@ -220,9 +220,9 @@ npm run start
 ### Deploying to Vercel
 
 The portfolio is optimized for zero-configuration deployment on [Vercel](https://vercel.com):
-1. Push your code to your GitHub repository: `https://github.com/shambhavijhacodes0504/my-portfolio-website`.
+1. Push your code to your GitHub repository: `https://github.com/shambhavijhacodes0504/my-protfolio-website`.
 2. Log into the Vercel dashboard and click **Add New Project**.
-3. Import the `my-portfolio-website` repository.
+3. Import the `my-protfolio-website` repository.
 4. Leave the default build settings (`Framework: Next.js`, `Build Command: npm run build`, `Output Directory: .next`).
 5. Click **Deploy**.
 

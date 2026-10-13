@@ -29,8 +29,8 @@ Participation in this project is governed by the [Code of Conduct](./CODE_OF_CON
 1. **Fork the Repository**: Create a fork under your own GitHub account.
 2. **Clone Locally**:
    ```bash
-   git clone https://github.com/<your-username>/my-portfolio-website.git
-   cd my-portfolio-website
+   git clone https://github.com/<your-username>/my-protfolio-website.git
+   cd Shambhavi-Portfolio-Website
    ```
 3. **Install Dependencies**:
    ```bash
@@ -53,7 +53,7 @@ Participation in this project is governed by the [Code of Conduct](./CODE_OF_CON
 ## Reporting Issues
 
 If you identify a bug, broken link, or rendering discrepancy:
-1. Check the [Issue Tracker](https://github.com/shambhavijhacodes0504/my-portfolio-website/issues) to ensure the issue hasn't already been reported.
+1. Check the [Issue Tracker](https://github.com/shambhavijhacodes0504/my-protfolio-website/issues) to ensure the issue hasn't already been reported.
 2. Open a new issue with:
    - A clear title and summary.
    - Operating system and browser version.
@@ -84,4 +84,4 @@ Constructive suggestions regarding UI accessibility, performance optimizations, 
 - **Maintainer**: Shambhavi Jha
 - **Email**: [shambhavijha0504@gmail.com](mailto:shambhavijha0504@gmail.com)
 - **GitHub**: [shambhavijhacodes0504](https://github.com/shambhavijhacodes0504)
-- **Repository**: [https://github.com/shambhavijhacodes0504/my-portfolio-website](https://github.com/shambhavijhacodes0504/my-portfolio-website)
+- **Repository**: [https://github.com/shambhavijhacodes0504/my-protfolio-website](https://github.com/shambhavijhacodes0504/my-protfolio-website)

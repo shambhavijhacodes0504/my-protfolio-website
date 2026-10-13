@@ -56,11 +56,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shambhavijhacodes0504/my-portfolio-website.git"
+    "url": "https://github.com/shambhavijhacodes0504/my-protfolio-website.git"
   },
-  "homepage": "https://github.com/shambhavijhacodes0504/my-portfolio-website#readme",
+  "homepage": "https://github.com/shambhavijhacodes0504/my-protfolio-website#readme",
   "bugs": {
-    "url": "https://github.com/shambhavijhacodes0504/my-portfolio-website/issues",
+    "url": "https://github.com/shambhavijhacodes0504/my-protfolio-website/issues",
     "email": "shambhavijha0504@gmail.com"
   },
   "dependencies": {
