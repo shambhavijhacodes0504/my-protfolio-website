@@ -206,7 +206,12 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative flex items-center justify-center lg:col-span-5 w-full -mt-2 sm:-mt-4 lg:-mt-6"
           >
-            <div className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] flex items-center justify-center">
+            {/* Soft celestial rim light accent */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -inset-2 -z-10 rounded-full bg-gradient-to-tr from-sky-500/10 via-sky-400/5 to-transparent blur-3xl opacity-60"
+            />
+            <div className="relative w-full h-[560px] sm:h-[600px] lg:h-[640px] flex items-center justify-center">
               <HangingIdCard />
             </div>
           </motion.div>

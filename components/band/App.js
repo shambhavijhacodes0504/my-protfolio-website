@@ -19,13 +19,15 @@ useTexture.preload(TEXTURE_PATH);
 export default function App({ className = '', style = {} }) {
   return (
     <div className={`relative w-full h-full ${className}`} style={style}>
-      <Canvas camera={{ position: [0, 0, 11], fov: 25 }} gl={{ alpha: true }}>
-        <ambientLight intensity={Math.PI} />
+      <Canvas camera={{ position: [0, 0, 11.5], fov: 25 }} gl={{ alpha: true }}>
+        <ambientLight intensity={Math.PI * 0.9} />
+        <directionalLight position={[3, 4, 4]} intensity={1.2} />
+        <directionalLight position={[-3, 2, 3]} intensity={0.6} />
         <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
           <Band />
         </Physics>
         <Environment blur={0.75}>
-          <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
+          <Lightformer intensity={2.5} color="#e0f2fe" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
@@ -48,20 +50,24 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   
   // Deteksi mobile berdasarkan lebar canvas
   const isMobile = width < 768;
+  // Beautifully enlarged card scale
+  const cardScale = isMobile ? 2.45 : 3.25;
+  const jointY = 2.70;
   
   // Posisi responsif untuk card anchor
-  const cardPosition = isMobile ? [0, 2.6, 0] : [0, 2.8, 0];
+  const cardPosition = isMobile ? [0, 2.45, 0] : [0, 2.65, 0];
   const initialJointPositions = [
-    [0.2, 0, 0], 
-    [0.4, 0, 0], 
-    [0.6, 0, 0], 
-    [0.8, 0, 0]
+    [0.12, 0, 0], 
+    [0.24, 0, 0], 
+    [0.36, 0, 0], 
+    [0.48, 0, 0]
   ];
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.75]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.75]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.75]);
-  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]]);
+  // Suspension rope segments
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.32]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.32]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.32]);
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, jointY, 0]]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -118,16 +124,23 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody position={initialJointPositions[3]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[isMobile ? 0.6 : 0.7, isMobile ? 0.85 : 0.98, 0.01]} />
+          <CuboidCollider args={[isMobile ? 1.0 : 1.30, isMobile ? 1.45 : 1.85, 0.01]} />
           <group
-            scale={isMobile ? 1.3 : 1.75}
-            position={[0, -0.70, -0.05]}
+            scale={cardScale}
+            position={[0, -(1.23 * cardScale - jointY), -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.3} metalness={0.5} />
+              <meshPhysicalMaterial
+                map={materials.base.map}
+                map-anisotropy={16}
+                clearcoat={1}
+                clearcoatRoughness={0.12}
+                roughness={0.25}
+                metalness={0.12}
+              />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
@@ -136,7 +149,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
       </group>
       <mesh ref={band} position={[0, 0, 0]} renderOrder={1}>
         <meshLineGeometry />
-        <meshLineMaterial color="white" depthTest={false} resolution={[width, height]} useMap map={texture} repeat={[-3, 1]} lineWidth={1} />
+        <meshLineMaterial color="white" depthTest={false} resolution={[width, height]} useMap map={texture} repeat={[-2, 1]} lineWidth={1} />
       </mesh>
     </>
   );
