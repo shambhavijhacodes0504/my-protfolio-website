@@ -35,10 +35,10 @@ export const EducationSection = () => {
 
       {/* Education Card */}
       <RevealContent delay={0.2} className="mt-10">
-        <div className="rounded-2xl border border-white/[0.1] bg-[#080d19] p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-sky-500/30 hover:shadow-[0_16px_36px_rgba(56,189,248,0.06)] sm:p-8">
+        <div className="spotlight-card rounded-2xl border border-white/[0.1] bg-[#080d19] p-6 shadow-xl backdrop-blur-xl sm:p-8">
           <div className="flex flex-col justify-between gap-4 border-b border-white/[0.08] pb-6 sm:flex-row sm:items-center">
             <div className="flex items-start gap-4">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-sky-500/30 bg-sky-500/10 text-sky-400 transition-transform duration-300 hover:scale-105">
+              <div className="interactive-circle flex size-12 shrink-0 items-center justify-center rounded-xl border border-sky-500/30 bg-sky-500/10 text-sky-400">
                 <FaGraduationCap className="text-xl" />
               </div>
               <div>
@@ -56,7 +56,7 @@ export const EducationSection = () => {
               <span className="font-mono text-xs font-semibold text-neutral-400">
                 2025 – Present
               </span>
-              <span className="mt-1 inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-0.5 font-mono text-xs font-bold text-sky-300 transition-colors hover:border-sky-500/50 hover:bg-sky-500/20">
+              <span className="interactive-pill mt-1 inline-flex items-center gap-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-0.5 font-mono text-xs font-bold text-sky-300">
                 <FaAward className="text-xs" />
                 CGPA: 8.7 / 10.0
               </span>
@@ -65,7 +65,7 @@ export const EducationSection = () => {
 
           {/* Curriculum Pillars */}
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-xl border border-white/[0.04] bg-black/30 p-4 transition-colors hover:border-sky-500/20">
+            <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-black/40 p-4">
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sky-400">
                 COMPUTER SCIENCE CORE
               </p>
@@ -77,7 +77,7 @@ export const EducationSection = () => {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-white/[0.04] bg-black/30 p-4 transition-colors hover:border-sky-500/20">
+            <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-black/40 p-4">
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sky-400">
                 MATHEMATICAL FOUNDATIONS
               </p>
@@ -89,7 +89,7 @@ export const EducationSection = () => {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-white/[0.04] bg-black/30 p-4 transition-colors hover:border-sky-500/20">
+            <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-black/40 p-4">
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-sky-400">
                 APPLIED SYSTEMS &amp; LABS
               </p>

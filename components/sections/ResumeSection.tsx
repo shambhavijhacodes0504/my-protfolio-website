@@ -59,7 +59,7 @@ export const ResumeSection = () => {
                 target="_blank"
                 rel="noreferrer noopener"
                 onClick={handleResumeAction}
-                className="inline-flex items-center justify-center gap-2.5 rounded-md border border-sky-500/40 bg-sky-500/10 px-6 py-3 font-sans text-xs font-semibold tracking-wide text-sky-300 transition-all duration-200 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.99]"
+                className="btn-glow inline-flex items-center justify-center gap-2.5 rounded-md border border-sky-500/40 bg-sky-500/10 px-6 py-3 font-sans text-xs font-semibold tracking-wide text-sky-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 <FaFilePdf className="text-sm" />
                 <span>View Resume</span>
@@ -70,7 +70,7 @@ export const ResumeSection = () => {
                 href={links.resumeUrl}
                 download="Shambhavi_Jha_Resume.pdf"
                 onClick={handleResumeAction}
-                className="inline-flex items-center justify-center gap-2 rounded-md border border-white/[0.12] bg-black-200/60 px-5 py-3 font-sans text-xs font-semibold text-neutral-200 backdrop-blur-sm transition-all duration-200 hover:border-white/30 hover:bg-black-300 hover:text-white hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.99]"
+                className="btn-glow inline-flex items-center justify-center gap-2 rounded-md border border-white/[0.12] bg-black-200/60 px-5 py-3 font-sans text-xs font-semibold text-neutral-200 backdrop-blur-sm hover:border-white/30 hover:bg-black-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 <FaDownload className="text-xs" />
                 <span>Download PDF</span>
@@ -94,7 +94,7 @@ export const ResumeSection = () => {
         {/* Right: Refined Document Overview Card */}
         <div className="lg:col-span-7">
           <RevealContent delay={0.18}>
-            <div className="rounded-2xl border border-white/[0.1] bg-[#080d19] p-6 shadow-2xl backdrop-blur-xl sm:p-8 transition-all duration-300 hover:border-sky-500/30 hover:shadow-[0_12px_40px_rgba(56,189,248,0.1)]">
+            <div className="spotlight-card rounded-2xl border border-white/[0.1] bg-[#080d19] p-6 shadow-2xl backdrop-blur-xl sm:p-8">
             {/* Document Header Strip */}
             <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
               <div className="flex items-center gap-3">
@@ -159,7 +159,7 @@ export const ResumeSection = () => {
                   ].map((item) => (
                     <span
                       key={item}
-                      className="rounded border border-white/[0.08] bg-black/50 px-2.5 py-1 font-mono text-xs text-neutral-300"
+                      className="interactive-pill rounded border border-white/[0.08] bg-black/50 px-2.5 py-1 font-mono text-xs text-neutral-300"
                     >
                       {item}
                     </span>
@@ -173,19 +173,19 @@ export const ResumeSection = () => {
                   Key Projects Documented in Resume
                 </p>
                 <div className="mt-2 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                  <div className="rounded border border-white/[0.06] bg-black/30 p-2.5">
+                  <div className="spotlight-card interactive-hover rounded border border-white/[0.06] bg-black/40 p-3">
                     <p className="text-xs font-semibold text-white">Loan Approval: ML vs. LLM</p>
                     <p className="font-mono text-[10px] text-neutral-400">Scikit-learn · Flask · OpenAI API</p>
                   </div>
-                  <div className="rounded border border-white/[0.06] bg-black/30 p-2.5">
+                  <div className="spotlight-card interactive-hover rounded border border-white/[0.06] bg-black/40 p-3">
                     <p className="text-xs font-semibold text-white">Artificial Wisdom System</p>
                     <p className="font-mono text-[10px] text-neutral-400">Explainable AI · Streamlit</p>
                   </div>
-                  <div className="rounded border border-white/[0.06] bg-black/30 p-2.5">
+                  <div className="spotlight-card interactive-hover rounded border border-white/[0.06] bg-black/40 p-3">
                     <p className="text-xs font-semibold text-white">AI-Driven CRM Analytics</p>
                     <p className="font-mono text-[10px] text-neutral-400">React.js · Node.js · MongoDB</p>
                   </div>
-                  <div className="rounded border border-white/[0.06] bg-black/30 p-2.5">
+                  <div className="spotlight-card interactive-hover rounded border border-white/[0.06] bg-black/40 p-3">
                     <p className="text-xs font-semibold text-white">Cross-Domain Recommendation</p>
                     <p className="font-mono text-[10px] text-neutral-400">Sentence Transformers · FastAPI</p>
                   </div>

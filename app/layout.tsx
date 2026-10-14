@@ -5,6 +5,7 @@ import type { PropsWithChildren } from "react";
 import { siteConfig } from "@/config";
 
 import { ThemeProvider } from "./provider";
+import { SmoothCursor } from "@/components/ui/SmoothCursor";
 
 import "./globals.css";
 
@@ -28,6 +29,7 @@ const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
     <html lang="en">
       <body className={`${inter.variable} ${cormorant.variable} ${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
+          <SmoothCursor />
           {children}
         </ThemeProvider>
       </body>

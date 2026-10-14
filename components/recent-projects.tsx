@@ -53,7 +53,7 @@ export const RecentProjects = () => {
                   title={hasDestination ? "Visit" : "In Development"}
                   href={hasDestination ? (link || sourceCode) : undefined}
                 >
-                  <div className="relative mb-10 flex h-[30vh] w-[80vw] items-center justify-center overflow-hidden sm:h-[40vh] sm:w-[570px]">
+                  <div className="media-zoom-container relative mb-10 flex h-[30vh] w-[80vw] items-center justify-center overflow-hidden sm:h-[40vh] sm:w-[570px]">
                     <div className="relative h-full w-full overflow-hidden bg-[#13162d] lg:rounded-3xl">
                       <Image
                         height={330}
@@ -85,7 +85,7 @@ export const RecentProjects = () => {
                       {iconLists?.map((icon: any, i: number) => (
                         <div
                           key={icon}
-                          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.2] bg-black transition-transform duration-200 hover:scale-110 lg:h-10 lg:w-10"
+                          className="interactive-circle flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.2] bg-black lg:h-10 lg:w-10"
                           style={{
                             transform: `translateX(-${5 * i * 2}px)`,
                           }}

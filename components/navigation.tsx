@@ -66,7 +66,7 @@ export const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.link}
-                className={`group relative py-1 text-xs font-medium tracking-wide transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
+                className={`hover-link-glow group relative py-1 text-xs font-medium tracking-wide transition-colors duration-200 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
                   isActive
                     ? 'text-white'
                     : 'text-neutral-400 hover:text-white'
@@ -87,9 +87,7 @@ export const Navigation = () => {
                     className="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.7)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
-                ) : (
-                  <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white/40 transition-all duration-200 group-hover:w-full" />
-                )}
+                ) : null}
               </Link>
             );
           })}
@@ -102,7 +100,7 @@ export const Navigation = () => {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="GitHub Profile"
-            className="flex size-8 items-center justify-center rounded border border-white/[0.1] bg-black-200/60 text-neutral-400 transition-all duration-200 hover:border-sky-500/40 hover:bg-black-300 hover:text-white hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            className="interactive-circle flex size-8 items-center justify-center rounded border border-white/[0.1] bg-black-200/60 text-neutral-400 hover:border-sky-500/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
             <FaGithub className="text-sm" />
           </Link>
@@ -112,14 +110,14 @@ export const Navigation = () => {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="LinkedIn Profile"
-            className="flex size-8 items-center justify-center rounded border border-white/[0.1] bg-black-200/60 text-neutral-400 transition-all duration-200 hover:border-sky-500/40 hover:bg-black-300 hover:text-white hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            className="interactive-circle flex size-8 items-center justify-center rounded border border-white/[0.1] bg-black-200/60 text-neutral-400 hover:border-sky-500/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
             <FaLinkedinIn className="text-sm" />
           </Link>
 
           <Link
             href="#contact"
-            className="rounded border border-sky-500/40 bg-sky-500/10 px-3.5 py-1.5 font-sans text-xs font-semibold tracking-wide text-sky-300 transition-all duration-200 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_16px_rgba(56,189,248,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-95"
+            className="btn-glow rounded border border-sky-500/40 bg-sky-500/10 px-3.5 py-1.5 font-sans text-xs font-semibold tracking-wide text-sky-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white hover:shadow-[0_0_16px_rgba(56,189,248,0.2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
             Contact
           </Link>

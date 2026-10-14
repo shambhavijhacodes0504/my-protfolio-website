@@ -176,11 +176,11 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ experience, isMobile = fals
   const isOffer = experience.status === 'Internship Offer';
 
   return (
-    <div className="group relative rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-[0_16px_36px_rgba(56,189,248,0.1)] sm:p-7">
+    <div className="spotlight-card group relative rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 shadow-xl backdrop-blur-xl sm:p-7">
       {/* Top Header Row: Icon & Status / Date Badges */}
       <div className="flex flex-wrap items-start justify-between gap-3 border-b border-white/[0.06] pb-4">
         <div className="flex items-center gap-3">
-          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-sky-500/30 bg-sky-500/10 text-sky-400 transition-transform duration-300 group-hover:scale-105">
+          <div className="interactive-circle flex size-10 shrink-0 items-center justify-center rounded-lg border border-sky-500/30 bg-sky-500/10 text-sky-400">
             <FaBriefcase className="text-sm" />
           </div>
           <div>
@@ -196,26 +196,26 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ experience, isMobile = fals
         {/* Status / Dates Badges */}
         <div className="flex flex-wrap items-center gap-2">
           {experience.dates && (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] font-medium text-neutral-300">
+            <span className="interactive-pill inline-flex items-center gap-1.5 rounded-full border border-white/[0.1] bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] font-medium text-neutral-300">
               <FaCalendarDays className="text-[10px] text-sky-400" />
               {experience.dates}
             </span>
           )}
 
           {isOffer ? (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/40 bg-sky-500/10 px-2.5 py-1 font-mono text-[11px] font-bold text-sky-300 shadow-[0_0_10px_rgba(56,189,248,0.15)]">
+            <span className="interactive-pill inline-flex items-center gap-1.5 rounded-full border border-sky-400/40 bg-sky-500/10 px-2.5 py-1 font-mono text-[11px] font-bold text-sky-300 shadow-[0_0_10px_rgba(56,189,248,0.15)]">
               <FaFileContract className="text-[10px]" />
               {experience.status}
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-bold text-emerald-300">
+            <span className="interactive-pill inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-bold text-emerald-300">
               <FaCircleCheck className="text-[10px]" />
               {experience.status}
             </span>
           )}
 
           {experience.location && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.02] px-2.5 py-1 font-mono text-[11px] text-neutral-400">
+            <span className="interactive-pill inline-flex items-center gap-1 rounded-full border border-white/[0.08] bg-white/[0.02] px-2.5 py-1 font-mono text-[11px] text-neutral-400">
               <FaLocationDot className="text-[10px] text-neutral-400" />
               {experience.location}
             </span>
@@ -262,7 +262,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ experience, isMobile = fals
               {experience.technologies.map((tech: string) => (
                 <span
                   key={tech}
-                  className="inline-flex items-center rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-neutral-300 transition-colors duration-150 hover:border-sky-400/40 hover:bg-sky-500/10 hover:text-white"
+                  className="interactive-pill inline-flex items-center rounded-md border border-white/[0.08] bg-white/[0.03] px-2.5 py-1 font-mono text-[11px] text-neutral-300"
                 >
                   {tech}
                 </span>

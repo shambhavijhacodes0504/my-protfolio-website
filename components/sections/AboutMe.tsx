@@ -22,16 +22,16 @@ export const AboutMe = () => {
           <RevealContent delay={0.1}>
             <div className="group relative mx-auto max-w-[380px] lg:max-w-none">
               {/* Ambient border and backdrop */}
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-white/[0.12] bg-[#0c1222] shadow-[0_8px_30px_rgb(0,0,0,0.5)] transition-all duration-300 group-hover:border-sky-500/50 group-hover:shadow-[0_12px_40px_rgba(56,189,248,0.2)]">
+              <div className="spotlight-card media-zoom-container relative aspect-[3/4] w-full overflow-hidden rounded-2xl border border-white/[0.12] bg-[#0c1222] shadow-[0_8px_30px_rgb(0,0,0,0.5)]">
                 <Image
                   src={assetConfig.portrait}
                   alt="Shambhavi in the workshop holding a model aircraft"
                   fill
                   sizes="(max-width: 1024px) 100vw, 420px"
-                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  className="object-cover object-top"
                   priority
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
 
               {/* Captioned note */}
@@ -72,32 +72,32 @@ export const AboutMe = () => {
           {/* Quick Pillars Grid */}
           <RevealContent delay={0.24}>
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-white/[0.08] pt-6 sm:grid-cols-4">
-              <div className="rounded-lg border border-transparent p-2 transition-colors hover:border-white/[0.06] hover:bg-white/[0.02]">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+              <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-3.5 backdrop-blur-sm">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-sky-400/80">
                   INSTITUTION
                 </p>
                 <p className="mt-1 font-sans text-xs font-semibold text-white sm:text-sm">
                   BIT Mesra
                 </p>
               </div>
-              <div className="rounded-lg border border-transparent p-2 transition-colors hover:border-white/[0.06] hover:bg-white/[0.02]">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+              <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-3.5 backdrop-blur-sm">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-sky-400/80">
                   PROGRAM
                 </p>
                 <p className="mt-1 font-sans text-xs font-semibold text-white sm:text-sm">
                   BCA (CGPA 8.7)
                 </p>
               </div>
-              <div className="rounded-lg border border-transparent p-2 transition-colors hover:border-white/[0.06] hover:bg-white/[0.02]">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+              <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-3.5 backdrop-blur-sm">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-sky-400/80">
                   FOCUS
                 </p>
                 <p className="mt-1 font-sans text-xs font-semibold text-white sm:text-sm">
                   AI/ML &amp; Data
                 </p>
               </div>
-              <div className="rounded-lg border border-transparent p-2 transition-colors hover:border-white/[0.06] hover:bg-white/[0.02]">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+              <div className="spotlight-card interactive-hover rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-3.5 backdrop-blur-sm">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-sky-400/80">
                   LOCATION
                 </p>
                 <p className="mt-1 font-sans text-xs font-semibold text-white sm:text-sm">

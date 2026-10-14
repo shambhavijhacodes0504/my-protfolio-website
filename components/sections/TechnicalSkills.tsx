@@ -96,7 +96,7 @@ export const TechnicalSkills = () => {
         {SKILL_GROUPS.map((group, idx) => (
           <StaggerItem
             key={group.category}
-            className={`flex flex-col justify-between rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-500/40 hover:bg-[#0c1324] hover:shadow-[0_12px_24px_rgba(56,189,248,0.06)] group ${
+            className={`spotlight-card flex flex-col justify-between rounded-xl border border-white/[0.08] bg-[#080d19]/80 p-6 backdrop-blur-sm group ${
               idx === 6 ? 'sm:col-span-2 lg:col-span-3' : ''
             }`}
           >
@@ -119,7 +119,7 @@ export const TechnicalSkills = () => {
               {group.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded border border-white/[0.08] bg-black/60 px-2.5 py-1 font-mono text-xs font-medium text-neutral-200 transition-all duration-200 hover:border-sky-500/40 hover:bg-sky-500/10 hover:text-white"
+                  className="interactive-pill rounded border border-white/[0.08] bg-black/60 px-2.5 py-1 font-mono text-xs font-medium text-neutral-200 cursor-default"
                 >
                   {skill}
                 </span>

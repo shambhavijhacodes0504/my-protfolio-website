@@ -129,7 +129,7 @@ export const ContactSection: React.FC = () => {
           {/* ========================================================= */}
           {/* LEFT PANEL: Direct Inquiries & Collaboration */}
           {/* ========================================================= */}
-          <div className="flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 sm:p-8 backdrop-blur-xl lg:col-span-5 shadow-2xl">
+          <div className="spotlight-card flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 sm:p-8 backdrop-blur-xl lg:col-span-5 shadow-2xl">
             <div>
               {/* Eyebrow */}
               <div className="mb-3 flex items-center gap-2">
@@ -148,7 +148,7 @@ export const ContactSection: React.FC = () => {
               </p>
 
               {/* Primary Email Card */}
-              <div className="mt-6 rounded-xl border border-white/[0.08] bg-black/40 p-4">
+              <div className="spotlight-card interactive-hover mt-6 rounded-xl border border-white/[0.08] bg-black/40 p-4">
                 <div className="flex items-center gap-2.5 text-neutral-400">
                   <FaEnvelope className="text-sky-400 text-sm" />
                   <span className="font-mono text-[11px] uppercase tracking-wider text-neutral-400">
@@ -164,7 +164,7 @@ export const ContactSection: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleCopyEmail}
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.12] bg-white/[0.05] px-4 py-2 font-sans text-xs font-semibold text-neutral-200 transition-all hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                    className="btn-glow inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.12] bg-white/[0.05] px-4 py-2 font-sans text-xs font-semibold text-neutral-200 hover:border-sky-400/50 hover:bg-sky-500/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                     aria-label="Copy email address to clipboard"
                   >
                     {copiedEmail ? (
@@ -182,7 +182,7 @@ export const ContactSection: React.FC = () => {
 
                   <a
                     href={`mailto:${links.ownerEmail}`}
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-sky-500/40 bg-sky-500/10 px-4 py-2 font-sans text-xs font-semibold text-sky-300 transition-all hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                    className="btn-glow inline-flex items-center justify-center gap-2 rounded-lg border border-sky-500/40 bg-sky-500/10 px-4 py-2 font-sans text-xs font-semibold text-sky-300 hover:border-sky-500/70 hover:bg-sky-500/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                   >
                     <FaEnvelope className="text-xs" />
                     <span>Email Directly</span>
@@ -202,10 +202,10 @@ export const ContactSection: React.FC = () => {
                     href={links.github}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="group flex items-center justify-between rounded-xl border border-white/[0.08] bg-black/30 p-3.5 transition-all hover:border-sky-500/40 hover:bg-sky-500/5"
+                    className="spotlight-card group flex items-center justify-between rounded-xl border border-white/[0.08] bg-black/30 p-3.5"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex size-8 items-center justify-center rounded-lg border border-white/[0.1] bg-black text-neutral-300 group-hover:text-white">
+                      <div className="interactive-circle flex size-8 items-center justify-center rounded-lg border border-white/[0.1] bg-black text-neutral-300 group-hover:text-white">
                         <FaGithub className="text-base" />
                       </div>
                       <div>
@@ -220,10 +220,10 @@ export const ContactSection: React.FC = () => {
                     href={links.linkedin}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="group flex items-center justify-between rounded-xl border border-white/[0.08] bg-black/30 p-3.5 transition-all hover:border-sky-500/40 hover:bg-sky-500/5"
+                    className="spotlight-card group flex items-center justify-between rounded-xl border border-white/[0.08] bg-black/30 p-3.5"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex size-8 items-center justify-center rounded-lg border border-white/[0.1] bg-black text-neutral-300 group-hover:text-white">
+                      <div className="interactive-circle flex size-8 items-center justify-center rounded-lg border border-white/[0.1] bg-black text-neutral-300 group-hover:text-white">
                         <FaLinkedinIn className="text-sm" />
                       </div>
                       <div>
@@ -254,7 +254,7 @@ export const ContactSection: React.FC = () => {
           {/* ========================================================= */}
           {/* RIGHT PANEL: Contact Form */}
           {/* ========================================================= */}
-          <div className="flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 sm:p-8 backdrop-blur-xl lg:col-span-7 shadow-2xl">
+          <div className="spotlight-card flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#080d19]/90 p-6 sm:p-8 backdrop-blur-xl lg:col-span-7 shadow-2xl">
             <div>
               {/* Eyebrow */}
               <div className="mb-3 flex items-center gap-2">
@@ -412,7 +412,7 @@ export const ContactSection: React.FC = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="mt-2 w-full inline-flex items-center justify-center gap-2.5 rounded-lg border border-sky-400/60 bg-sky-500/20 py-3.5 px-6 font-sans text-sm font-bold tracking-wide text-white transition-all hover:bg-sky-500/30 hover:border-sky-400 hover:shadow-[0_0_24px_rgba(56,189,248,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.99]"
+                  className="btn-glow mt-2 w-full inline-flex items-center justify-center gap-2.5 rounded-lg border border-sky-400/60 bg-sky-500/20 py-3.5 px-6 font-sans text-sm font-bold tracking-wide text-white hover:bg-sky-500/30 hover:border-sky-400 hover:shadow-[0_0_24px_rgba(56,189,248,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <FaPaperPlane className="text-xs" />
                   <span>Send Message</span>

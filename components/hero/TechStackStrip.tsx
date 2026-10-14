@@ -121,13 +121,13 @@ export const TechStackStrip: React.FC = () => {
           return (
             <div
               key={item.id}
-              className="group flex flex-col items-center gap-2"
+              className="group interactive-hover flex flex-col items-center gap-2 cursor-pointer"
               tabIndex={0}
               role="button"
               aria-label={`${item.name} - ${item.category}`}
             >
               <div
-                className="relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:border-white/30 group-focus-visible:ring-2 group-focus-visible:ring-sky-400"
+                className="interactive-circle relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 backdrop-blur-md group-hover:border-sky-400/50 group-focus-visible:ring-2 group-focus-visible:ring-sky-400"
                 style={{
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
                 }}
@@ -160,13 +160,13 @@ export const TechStackStrip: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className="group flex flex-col items-center gap-2 animate-in fade-in zoom-in-95 duration-200"
+                className="group interactive-hover flex flex-col items-center gap-2 cursor-pointer animate-in fade-in zoom-in-95 duration-200"
                 tabIndex={0}
                 role="button"
                 aria-label={`${item.name} - ${item.category}`}
               >
                 <div
-                  className="relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 backdrop-blur-md transition-all duration-300 group-hover:scale-105 group-hover:border-white/30 group-focus-visible:ring-2 group-focus-visible:ring-sky-400"
+                  className="interactive-circle relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 backdrop-blur-md group-hover:border-sky-400/50 group-focus-visible:ring-2 group-focus-visible:ring-sky-400"
                   style={{
                     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
                   }}
@@ -195,11 +195,11 @@ export const TechStackStrip: React.FC = () => {
         <button
           type="button"
           onClick={() => setShowExtended(!showExtended)}
-          className="group flex flex-col items-center gap-2 focus-visible:outline-none"
+          className="group interactive-hover flex flex-col items-center gap-2 focus-visible:outline-none"
           aria-expanded={showExtended}
           aria-label={showExtended ? 'Show fewer technical tools' : 'Show more technical tools'}
         >
-          <div className="relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 text-neutral-400 backdrop-blur-md transition-all duration-300 group-hover:border-sky-400/50 group-hover:text-white group-hover:scale-105 group-hover:shadow-[0_0_16px_rgba(56,189,248,0.25)]">
+          <div className="interactive-circle relative flex size-12 sm:size-14 items-center justify-center rounded-full border border-white/10 bg-black/60 text-neutral-400 backdrop-blur-md group-hover:border-sky-400/50 group-hover:text-white group-hover:shadow-[0_0_18px_rgba(56,189,248,0.35)]">
             <HiDotsHorizontal className="text-xl transition-transform duration-200 group-hover:scale-110" />
           </div>
 

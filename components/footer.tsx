@@ -44,7 +44,7 @@ export const Footer = () => {
               href={profile.link}
               target={profile.link.startsWith("mailto:") ? undefined : "_blank"}
               rel={profile.link.startsWith("mailto:") ? undefined : "noreferrer noopener"}
-              className="flex size-10 items-center justify-center rounded-lg border border-white/[0.1] bg-black-200/80 backdrop-blur-md transition-all duration-200 hover:border-sky-500/50 hover:bg-black-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+              className="interactive-circle flex size-10 items-center justify-center rounded-lg border border-white/[0.1] bg-black-200/80 backdrop-blur-md hover:border-sky-500/50 hover:bg-black-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               aria-label={profile.name}
               title={profile.name}
             >

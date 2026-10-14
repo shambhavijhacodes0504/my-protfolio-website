@@ -182,7 +182,7 @@ const CardSection: React.FC = () => {
                 </div>
 
                 {/* Back Side - Verified Project Architecture Dossier */}
-                <div className={`${styles.flipCardBack} flex flex-col justify-between border border-white/[0.12] bg-[#080d19] p-6 text-left`}>
+                <div className={`${styles.flipCardBack} spotlight-card flex flex-col justify-between border border-white/[0.12] bg-[#080d19] p-6 text-left`}>
                   <div className="flex flex-col">
                     <span className="font-mono text-[10px] font-semibold tracking-widest text-sky-400">
                       {id === 1
@@ -223,7 +223,7 @@ const CardSection: React.FC = () => {
                       ).map((tech) => (
                         <span
                           key={tech}
-                          className="rounded border border-white/[0.1] bg-black/60 px-2 py-0.5 font-mono text-[10px] text-neutral-300"
+                          className="interactive-pill rounded border border-white/[0.1] bg-black/60 px-2 py-0.5 font-mono text-[10px] text-neutral-300"
                         >
                           {tech}
                         </span>

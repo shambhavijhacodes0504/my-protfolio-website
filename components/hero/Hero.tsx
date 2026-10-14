@@ -171,7 +171,7 @@ export const Hero: React.FC = () => {
               {/* Primary Glowing Button */}
               <Link
                 href="#projects"
-                className="group relative inline-flex items-center justify-center gap-2.5 rounded-xl border border-sky-400/50 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(14,165,233,0.38)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_36px_rgba(14,165,233,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.98]"
+                className="btn-glow group relative inline-flex items-center justify-center gap-2.5 rounded-xl border border-sky-400/50 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(14,165,233,0.38)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 <span>Explore My Work</span>
                 <FaArrowUpRightFromSquare className="text-xs transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -182,7 +182,7 @@ export const Hero: React.FC = () => {
                 href={links.resumeUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-black/60 px-6 py-3.5 text-sm font-medium text-neutral-200 backdrop-blur-md transition-all duration-300 hover:border-white/35 hover:bg-black/80 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:scale-[0.98]"
+                className="btn-glow group inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/15 bg-black/60 px-6 py-3.5 text-sm font-medium text-neutral-200 backdrop-blur-md hover:border-white/35 hover:bg-black/80 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 <FaFileLines className="text-sm text-neutral-400 transition-colors group-hover:text-white" />
                 <span>View R&eacute;sum&eacute;</span>
